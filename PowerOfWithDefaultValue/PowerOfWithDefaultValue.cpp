@@ -2,32 +2,32 @@
 //
 
 #include <iostream>
-double power(double baseNumber_, int valuePower_ = 2);
+long  power(long  baseNumber_, int valuePower_ = 2);
 
 int main()
 {
 	std::cout << "Please provide number: ";
-	double baseNumber;
+	long double baseNumber;
 	std::cin >> baseNumber;
 	std::cout << "Please provide power number: ";
 	int valuePower;
 	std::cin >> valuePower;
 
-	double result = power(baseNumber, valuePower);
+	long  result = power(baseNumber, valuePower);
 
 	std::cout << "Result of calculation is: " << result << std::endl;
 
 	system("pause");
     return 0;
 }
-double power(double baseNumber_, int valuePower_)
+long  power(long  baseNumber_, int valuePower_)
 {
 	
-	double result_ = 0;
+	long  result_ = baseNumber_;
 
-	for (int i = 0; i < valuePower_; i++)
+	for (int i = 1; i < valuePower_; i++)
 	{
-		result_ = baseNumber_ * baseNumber_;
+		result_ = result_ * baseNumber_;
 	}
 
 	return result_;
